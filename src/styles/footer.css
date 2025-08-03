@@ -1,0 +1,114 @@
+.footer {
+  background-color: #142e38;
+  color: white;
+  padding: 4rem 2rem 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer-logo h3 {
+  font-size: 1.8rem;
+  color: #2a9d8f;
+  margin-bottom: 1rem;
+}
+
+.footer-logo p {
+  color: #a8dadc;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem;
+}
+
+.footer-links .link-group:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+}
+
+.footer-links .link-group:nth-child(2) h4 {
+  flex-basis: 100%;
+  margin-bottom: 1rem;
+}
+
+.footer-links .link-group:nth-child(2) a {
+  display: inline-block;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.link-group h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.link-group a {
+  display: block;
+  color: #a8dadc;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s;
+}
+
+.link-group a:hover {
+  color: #2a9d8f;
+}
+
+.footer-bottom {
+  border-top: 1px solid #344e5f;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #a8dadc;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* 🔧 Corrección importante del grupo Legal */
+  .footer-links .link-group:nth-child(2) {
+    display: block;
+  }
+
+  .footer-links .link-group:nth-child(2) h4 {
+    margin-bottom: 1rem;
+  }
+
+  .footer-links .link-group:nth-child(2) a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .link-group a {
+    font-size: 0.95rem;
+  }
+
+  .footer-logo h3 {
+    font-size: 1.4rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+

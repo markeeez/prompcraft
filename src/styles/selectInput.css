@@ -1,0 +1,67 @@
+/* Estilo para react-select adaptado al diseño oscuro de tu panel */
+
+.custom-select__control {
+  background-color: #274c4e;
+  border: 1px solid var(--c-green);
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 2px;
+  box-shadow: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-select__control--is-focused {
+  border-color: var(--c-green);
+  box-shadow: 0 0 0 2px var(--s-green);
+}
+
+.custom-select__single-value {
+  color: var(--color-text, #eafbf8);
+}
+
+.custom-select__input {
+  color: #eafbf8;
+}
+
+.custom-select__menu {
+  background-color: #1f3c3f;
+  border-radius: 8px;
+  z-index: 9999;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.custom-select__option {
+  color: #eafbf8;
+  font-size: 1rem;
+  padding: 10px 15px;
+  transition: background-color 0.2s ease;
+}
+
+.custom-select__option--is-focused {
+  background-color: var(--c-green-hover);
+  color: white;
+}
+
+.custom-select__option--is-selected {
+  background-color: var(--c-green);
+  color: white;
+}
+
+.custom-select__indicator {
+  color: #eafbf8;
+}
+
+.custom-select__placeholder {
+  color: #a8d6d0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .custom-select__control {
+    font-size: 0.95rem;
+  }
+
+  .custom-select__option {
+    font-size: 0.95rem;
+  }
+}

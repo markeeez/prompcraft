@@ -1,0 +1,110 @@
+:root {
+  --color-primary: #00b894;
+  --color-primary-hover: #019170;
+  --color-background-deep: #1f3c3f;
+  --color-panel: #274c4e;
+  --color-input: #345e5f;
+  --color-textarea: #223f40;
+  --color-border: #3a585a;
+  --color-text: #eafbf8;
+  --color-subtext: #a8d6d0;
+  --color-error: #e74c3c;
+  --color-error-hover: #c0392b;
+  --fondo-principal: #e6f6f2;
+  --padding-global: 1.2rem;
+  --header-height: 72px;
+  --radius: 10px;
+}
+
+.cookies-main {
+  margin: 2rem auto;
+  max-width: 900px;
+  font-family: 'Inter', sans-serif;
+  color: #0f172a;
+  padding-top: 10rem;
+  background-color: var(--fondo-principal);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  padding: 2rem;
+}
+
+.cookies-titulo {
+  font-size: 2.5rem;
+  color: var(--color-primary-hover); /* Verde principal */
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.cookies-subtitulo {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #334155; /* Gris azulado */
+}
+
+.cookies-seccion {
+  margin-bottom: 3rem;
+}
+
+.cookies-seccion h2 {
+  color: var(--color-input); 
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.cookies-seccion ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.cookies-seccion a {
+  color: var(--color-primary-hover); 
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.cookies-seccion a:hover {
+  color: #0284c7;
+}
+
+.page-wrapper {
+  padding-top: 6rem;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #142e38; 
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .cookies-main {
+    padding: 1.5rem;
+    margin: 1rem;
+    padding-top: 7rem;
+    box-shadow: none;
+  }
+
+  .cookies-titulo {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .cookies-subtitulo {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .cookies-seccion h2 {
+    font-size: 1.25rem;
+  }
+
+  .cookies-seccion ul {
+    padding-left: 1.2rem;
+  }
+
+  .page-wrapper {
+    padding-top: 5rem;
+  }
+}

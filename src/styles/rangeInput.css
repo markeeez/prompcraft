@@ -1,0 +1,79 @@
+/* src/styles/rangeInput.css */
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex; /* Para alinear el label con el valor */
+  justify-content: space-between;
+}
+
+.input-group label span {
+  font-weight: 600;
+  color: var(--c-green); /* El valor actual en tu verde principal */
+}
+
+.range-input {
+  width: 100%;
+  height: 8px; /* Altura de la barra del slider */
+  background: #ddd; /* Color de la barra de fondo */
+  border-radius: 5px;
+  outline: none;
+  -webkit-appearance: none; /* Elimina estilos por defecto de Chrome/Safari */
+  appearance: none; /* Elimina estilos por defecto */
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Estilos para el "thumb" (la bolita o deslizador) */
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px; /* Tamaño del thumb */
+  height: 20px; /* Tamaño del thumb */
+  border-radius: 50%; /* Circular */
+  background: var(--c-green); /* Color del thumb */
+  cursor: pointer;
+  box-shadow: 0 2px 5px var(--s-green); /* Sombra para el thumb */
+  margin-top: -6px; /* Ajuste vertical para centrar el thumb en la barra */
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.range-input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--c-green);
+  cursor: pointer;
+  box-shadow: 0 2px 5px var(--s-green);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.range-input::-webkit-slider-thumb:hover {
+  background: var(--c-green-hover); /* Color al pasar el ratón */
+  transform: scale(1.1); /* Ligeramente más grande al pasar el ratón */
+}
+
+.range-input::-moz-range-thumb:hover {
+  background: var(--c-green-hover);
+  transform: scale(1.1);
+}
+
+/* Estilos para la pista (la parte del slider antes del thumb) */
+.range-input::-webkit-slider-runnable-track {
+  height: 8px;
+  background: linear-gradient(to right, var(--c-green) var(--fill-percentage, 50%), #ddd var(--fill-percentage, 50%)); /* Esto se llenará con JS */
+  border-radius: 5px;
+}
+
+.range-input::-moz-range-track {
+  height: 8px;
+  background: linear-gradient(to right, var(--c-green) var(--fill-percentage, 50%), #ddd var(--fill-percentage, 50%)); /* Esto se llenará con JS */
+  border-radius: 5px;
+}

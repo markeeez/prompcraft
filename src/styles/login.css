@@ -1,0 +1,301 @@
+:root {
+  /* Paleta de colores verde */
+  --c-white: #FFFFFF;
+  --c-green: #2a9d8f;
+  --s-green: rgba(42, 157, 143, 0.35);
+  --c-green-hover: #21867a;
+  --s-green-hover: rgba(33, 134, 122, 0.4);
+  --s-green-bg: rgba(3, 83, 74, 0.4);
+  --c-dark-bg: #0d1b2a;  /* Verde oscuro intenso */
+  --c-text-dark: #1F2937;
+  --c-text-medium: #4B5563;
+  --c-text-light: #E0E1DD;  /* Texto claro para fondo oscuro */
+  --c-border: #E5E7EB;
+}
+
+/* Estructura principal - Fondo verde oscuro */
+.ia-login-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--c-dark-bg);
+  color: var(--c-text-light);
+}
+
+/* Encabezado - Adaptado para fondo oscuro */
+.ia-login-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.ia-login-header h1 {
+  font-size: 2.5rem;
+  color: var(--c-green);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.ia-login-header h2 {
+  font-size: 1.25rem;
+  color: var(--c-text-medium);
+  font-weight: 400;
+}
+
+/* Contenedor del formulario */
+.ia-login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+/* Caja del login */
+.ia-login-box {
+  background: var(--c-white);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px var(--s-green);
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid var(--c-border);
+}
+
+/* Estilos del formulario */
+.promptcraft-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  color: var(--c-text-dark);
+  margin-bottom: 0.25rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-subtitle {
+  color: var(--c-text-medium);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.ia-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Grupos de input */
+.ia-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ia-input-label {
+  font-size: 0.875rem;
+  color: var(--c-text-dark);
+  font-weight: 500;
+}
+
+.ia-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: var(--c-bg-light);
+}
+
+.ia-input:focus {
+  outline: none;
+  border-color: var(--c-green);
+  box-shadow: 0 0 0 3px var(--s-green);
+}
+
+.ia-primary-button {
+  /* Base estilizada */
+  background: linear-gradient(135deg, #2a9d8f 0%, #1db8a8 100%);
+  color: var(--c-white);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+  /* Efectos de profundidad */
+  box-shadow: 
+    0 4px 12px rgba(42, 157, 143, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  /* Tipografía mejorada */
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  
+  /* Borde premium */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  
+  /* Efecto de iluminación interior */
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Efecto hover mejorado */
+.ia-primary-button:hover {
+  background: linear-gradient(135deg, #21867a 0%, #189e8e 100%);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(33, 134, 122, 0.5),
+    0 3px 6px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Efecto activo con feedback táctil */
+.ia-primary-button:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 2px 6px rgba(42, 157, 143, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.1),
+    inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de brillo dinámico (como .home-button) */
+.ia-primary-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.7s ease;
+  opacity: 0;
+}
+
+.ia-primary-button:hover::before {
+  opacity: 1;
+  animation: buttonShine 1.8s infinite;
+}
+
+@keyframes buttonShine {
+  0% { left: -60%; }
+  100% { left: 120%; }
+}
+
+/* Versión alternativa sin mayúsculas para mejor legibilidad */
+.ia-primary-button {
+  text-transform: none; /* Removido para coincidir con tu diseño original */
+}
+
+/* Transición más suave para el gradiente */
+.ia-primary-button {
+  background-size: 150% 150%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Links */
+.ia-login-links {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ia-link {
+  color: var(--c-green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.ia-link:hover {
+  color: var(--c-green-hover);
+  text-decoration: underline;
+}
+
+.ia-link-bold {
+  font-weight: 600;
+}
+
+/* Footer */
+.ia-login-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+  color: var(--c-text-medium);
+}
+
+.ia-footer-subtext {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: var(--c-text-light);
+}
+
+/* Efectos de hover y focus */
+button:focus, input:focus, a:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--s-green);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ia-login-page {
+    padding: 1.5rem;
+  }
+  
+  .ia-login-box {
+    padding: 2rem;
+  }
+  
+  .ia-login-header h1 {
+    font-size: 2rem;
+  }
+  
+  .ia-login-header h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ia-login-page {
+    padding: 1rem;
+  }
+  
+  .ia-login-box {
+    padding: 1.5rem;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  
+  .ia-login-content {
+    align-items: flex-start;
+  }
+  
+  .ia-input {
+    background: var(--c-white);
+  }
+}

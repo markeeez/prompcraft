@@ -1,0 +1,122 @@
+.como-empezar {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #f0f9f8 0%, #e0f2f1 100%);
+}
+
+.como-empezar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.como-empezar-titulo {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #142e38;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.como-empezar-titulo::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #2a9d8f, #1db8a8);
+}
+
+.pasos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.paso-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  box-shadow: 0 5px 15px rgba(42, 157, 143, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.paso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(42, 157, 143, 0.2);
+}
+
+.paso-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.paso-numero {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2a9d8f;
+  line-height: 1;
+}
+
+.paso-icono {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.paso-titulo {
+  color: #264653;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.paso-descripcion {
+  color: #4a6b7c;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Línea conectora entre pasos (opcional) */
+.paso-card::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50px;
+  width: 2px;
+  height: 2rem;
+  background: linear-gradient(to bottom, #2a9d8f, #1db8a8);
+  opacity: 0.5;
+}
+
+.paso-card:last-child::after {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .paso-card {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  .paso-header {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .paso-card::after {
+    left: 40px;
+    height: 1.5rem;
+  }
+}

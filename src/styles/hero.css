@@ -1,0 +1,227 @@
+.hero {
+  padding: 8rem 2rem 4rem;
+  background: linear-gradient(135deg, #f0f9f8 0%, #e0f2f1 100%);
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #264653;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #4a6b7c;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.cta-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.primary-cta {
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.primary-cta:hover {
+  background-color: #21867a;
+  transform: translateY(-2px);
+}
+.secondary-button {
+  background: transparent;
+  color: #2a9d8f;
+  border: 2px solid #2a9d8f;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(42, 157, 143, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.secondary-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.secondary-button:hover {
+  background: linear-gradient(
+    to right,
+    rgba(42, 157, 143, 0.1) 0%,
+    rgba(29, 184, 168, 0.1) 100%
+  );
+  color: #21867a;
+  box-shadow: 0 4px 15px rgba(42, 157, 143, 0.2);
+  transform: translateY(-2px);
+}
+
+.secondary-button:hover::after {
+  left: 100%;
+}
+
+.secondary-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(42, 157, 143, 0.2);
+}
+
+/* Animación del borde */
+@keyframes border-pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+.trust-badges {
+  display: flex;
+  gap: 1.5rem;
+  color: #4a6b7c;
+  font-size: 0.9rem;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.hero-gif {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 400px;
+  background-color: #e9f5f4;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.home-button {
+  /* Base */
+  background: linear-gradient(135deg, #2a9d8f 0%, #1db8a8 100%); /* Degradado verde */
+  color: var(--c-white);
+  border: none;
+  padding: 0.8rem 1.8rem; /* Más ancho para mejor legibilidad */
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  
+  /* Sombra y profundidad */
+  box-shadow: 
+    0 4px 12px rgba(42, 157, 143, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  /* Texto */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  
+  /* Borde sutil para contraste */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Efecto hover */
+.home-button:hover {
+  background: linear-gradient(135deg, #21867a 0%, #2a9d8f 100%); /* Degradado invertido */
+  box-shadow: 
+    0 6px 20px rgba(33, 134, 122, 0.5),
+    0 3px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+/* Efecto activo */
+.home-button:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 2px 6px rgba(42, 157, 143, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Opcional: Efecto de "brillo" al hover */
+.home-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.home-button:hover::before {
+  opacity: 1;
+  animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}

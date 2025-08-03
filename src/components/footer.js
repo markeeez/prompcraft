@@ -30,7 +30,7 @@ const Footer = () => {
 
           <div className="link-group">
             <h4>Contacto</h4>
-            <a href="mailto:hola@promptcraft.com">hola@promptcraft.com</a>
+            <a href="mailto:hola@promptcraft.com">promcraftInfo300@gmail.com</a>
           </div>
         </div>
       </div>

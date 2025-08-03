@@ -8,6 +8,7 @@ import NotFound from './components/NotFound';
 import './styles/main.css';
 import { lazy, Suspense } from 'react';
 import LoadingSpinner from './components/LoadingSpinner';
+import { Analytics } from '@vercel/analytics/react';
 
 // Lazy load de páginas
 const Home = lazy(() => import('./pages/Home'));
@@ -68,6 +69,7 @@ function App() {
       <Suspense fallback={<LoadingSpinner />}>
         <AppContent /> 
       </Suspense>
+      <Analytics />
     </BrowserRouter>
   );
 }

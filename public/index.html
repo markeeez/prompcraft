@@ -1,22 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <link rel="icon" type="image/png" href="%PUBLIC_URL%/logo.png" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Transforma tus ideas en prompts profesionales para generación de imágenes con IA. Interfaz intuitiva para todos los niveles." />
-  <meta name="keywords" content="IA, generación de imágenes, prompt engineering, inteligencia artificial, diseño con IA" />
-  <meta name="author" content="PromptGenius" />
-  <meta property="og:title" content="PromptCraft - Ingeniería de prompts simplificada" />
-  <meta property="og:description" content="Interfaz intuitiva para crear prompts profesionales para generación de imágenes con IA." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tusitio.com" />
-  <title>Crea prompts para IA sin ser experto</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div id="root"></div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+
+    <title>PromptCraft — Genera prompts visuales sin ser experto</title>
+    <meta
+      name="description"
+      content="Crea prompts optimizados para generar imágenes con IA mediante controles intuitivos: estilos, resolución, elementos y más. Ideal para no-expertos en prompt engineering."
+    />
+
+    <!-- Canonical (cámbialo por tu dominio de Vercel o personalizado) -->
+    <link rel="canonical" href="https://prompcraft.vercel.app/" />
+
+    <!-- Favicons / PWA -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta name="theme-color" content="#0ea472" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PromptCraft" />
+    <meta property="og:url" content="https://prompcraft.vercel.app/" />
+    <meta
+      property="og:title"
+      content="PromptCraft — Genera prompts visuales sin ser experto"
+    />
+    <meta
+      property="og:description"
+      content="Crea prompts optimizados para IA con una interfaz sencilla: estilos, resolución, elementos, posición y más."
+    />
+    <meta property="og:image" content="https://prompcraft.vercel.app/og.png" />
+    <meta name="twitter:image" content="https://prompcraft.vercel.app/og.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PromptCraft" />
+    <meta
+      name="twitter:description"
+      content="Genera prompts de imagen con controles visuales."
+    />
+
+
+    <!-- Preconnect para rendimiento si usas fuentes o Supabase más adelante -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Ejemplo de fuente (opcional) -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"> -->
+
+    <!-- Robots (extra; ya tienes robots.txt) -->
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+
+    <!-- JSON-LD: SoftwareApplication -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "PromptCraft",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web",
+        "url": "https://prompcraft.vercel.app/",
+        "description": "Generador de prompts visuales para imágenes con IA, pensado para no expertos.",
+        "creator": { "@type": "Organization", "name": "PromptCraft" }
+      }
+    </script>
+
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
+  <body>
+    <noscript>Esta aplicación necesita JavaScript para funcionar.</noscript>
+    <div id="root"></div>
+  </body>
 </html>

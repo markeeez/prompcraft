@@ -264,3 +264,20 @@
   }
 }
 
+/* Foco accesible al tabular */
+.nav a:focus-visible,
+.home-button:focus-visible {
+  outline: 3px solid var(--c-green);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.nav .active-link {
+  color: var(--c-green);
+  font-weight: 700;
+  background-color: rgba(42, 157, 143, 0.1); 
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+}
+
+

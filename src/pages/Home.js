@@ -1,5 +1,5 @@
 import Hero from '../components/hero';
-import Features from '../components/features';
+import Features from '../components/Features';
 import Steps from '../components/steps';
 import FAQ from '../components/faq';
 
